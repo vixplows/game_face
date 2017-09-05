@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :profiles
   get 'gameface', to:'gameface#home'
 
   get 'gameface/profile', to: 'gameface#profile'
