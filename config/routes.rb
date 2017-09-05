@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :profiles
-  get 'gameface', to:'gameface#home'
+  resources :profiles;
 
-  get 'gameface/profile', to: 'gameface#profile'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
