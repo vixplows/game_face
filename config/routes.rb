@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :profiles;
 
+  get 'my_profile', to: 'users#my_profile'
+
   root to: "profiles#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

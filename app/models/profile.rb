@@ -1,4 +1,6 @@
 class Profile < ActiveRecord::Base
+  
+  belongs_to :user
 
   validates :username, presence: true, length: {minimum: 6, maximum: 20}
 
