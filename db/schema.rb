@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170906173845) do
   create_table "profiles", force: :cascade do |t|
     t.string   "username"
     t.text     "bio"
+    t.string   "fave_game"
     t.string   "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
