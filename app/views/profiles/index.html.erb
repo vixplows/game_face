@@ -1,31 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Player Profiles</h1>
+<h1 align = "center">Player Profiles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Username</th>
-      <th>Bio</th>
-      <th>City</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @profiles.each do |profile| %>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="well well-lg">
+      <div class= "user-name">
+        <%= link_to profile.username, profile%>
+      </div>
+      <div class="user-bio">
+        <%= profile.bio %>
+      </div>
+      <div class="user-city">
+        <%= profile.city %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <tbody>
-    <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.username %></td>
-        <td><%= profile.bio %></td>
-        <td><%= profile.city %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<!--   <td><%= link_to 'Show', profile, class: "btn btn-xs btn-primary" %></td>
+  <td><%= link_to 'Edit', edit_profile_path(profile), class: "btn btn-xs btn-primary" %></td>
+  <td><%= link_to 'Destroy', profile, class: "btn btn-xs btn-primary",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr> -->
+<% end %>
 
-<%= link_to 'New Profile', new_profile_path %>
+
+<!-- <br>
+
+<%= link_to 'New Profile', new_profile_path %> -->
