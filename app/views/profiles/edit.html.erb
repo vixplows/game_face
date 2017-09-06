@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @profile, class: "btn btn-xs btn-primary"  %> |
-<%= link_to 'Back', profiles_path, class: "btn btn-xs btn-primary"  %>
+<%= link_to 'Back', profiles_path, class: "btn btn-xs btn-primary"  %> |
+<%= link_to 'Delete', profile_path, :method => :delete, class: "btn btn-xs btn-danger" %>
